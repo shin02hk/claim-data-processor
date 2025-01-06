@@ -1,19 +1,70 @@
-# 🎈 Blank app template
+# PDF to Excel Converter
 
-A simple Streamlit app template for you to modify!
+A web application for extracting selected areas from PDF documents and converting them to Excel format. Built with React and integrated with a Python backend.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Features
 
-### How to run it on your own machine
+- Upload and view PDF documents
+- Interactive area selection for text extraction
+- Export selected content to Excel format
+- Temporary file storage with automatic cleanup
+- Modern UI with responsive design
 
-1. Install the requirements
+## Project Structure
 
+This project combines a React frontend with a Python backend:
+
+### Frontend (React + TypeScript + Vite)
+
+The frontend provides a modern web interface for PDF processing:
+
+1. Install dependencies:
+   ```bash
+   npm install
    ```
-   $ pip install -r requirements.txt
+
+2. Run development server:
+   ```bash
+   npm run dev
    ```
 
-2. Run the app
+### Backend (Python)
 
+The backend handles data processing and storage:
+
+1. Install requirements:
+   ```bash
+   pip install -r requirements.txt
    ```
-   $ streamlit run streamlit_app.py
+
+2. Run the app:
+   ```bash
+   streamlit run streamlit_app.py
    ```
+
+## Development
+
+For frontend development, see the [Vite documentation](https://vitejs.dev/guide/) for more information about the build setup.
+
+### ESLint Configuration
+
+The project uses ESLint with TypeScript support. To enable type-aware lint rules:
+
+```js
+export default tseslint.config({
+  languageOptions: {
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
